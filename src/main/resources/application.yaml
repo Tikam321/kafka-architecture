@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: kafka-architecture
+
+#  kafka:
+#    bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+#  kafka:
+#    bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+#    producer:
+#      acks: 1
+#      batch-size: 32768
+#      linger-ms: 5
+#      compression-type: lz4
+#
+#    consumer:
+#      group-id: analytics-service
+#      auto-offset-reset: earliest
+#      enable-auto-commit: false
+#      max-poll-records: 500
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#
+
+
+  kafka:
+    bootstrap-servers: localhost:8098
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+      retries: 2147483647
+      properties:
+        linger.ms: 20
+        batch.size: 65536
+        compression.type: lz4
+        enable.idempotence: true
+    consumer:
+      max.poll.records: 500
+      group-id: analytics-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      properties:
+        isolation.level: read_committed
+
+app:
+  kafka:
+    topic: user-events
