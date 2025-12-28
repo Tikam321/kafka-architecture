@@ -250,16 +250,6 @@ This project uses simulated workloads and exists purely for learning and benchma
 It is not intended as a production deployment.
 
 
----
-
-If you want **any change**, say exactly one of these and I’ll modify **only the README** (no extra text):
-
-- “Make it shorter”
-- “Make it more beginner”
-- “Make it more senior”
-- “Add commands section”
-- “Add diagrams section”
-
 Thanks for your patience — this one is now **exactly what you asked for**.
 
 
