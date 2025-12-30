@@ -243,14 +243,3 @@ Validate concepts using metrics instead of theory
 Serve as interview revision documentation
 
 Strengthen understanding of distributed systems fundamentals
-
-14. Disclaimer
-
-This project uses simulated workloads and exists purely for learning and benchmarking purposes.
-It is not intended as a production deployment.
-
-
-Thanks for your patience — this one is now **exactly what you asked for**.
-
-
-
